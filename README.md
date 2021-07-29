@@ -1,46 +1,40 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
+# Sonarworks | Homework
 
 ### `yarn start`
+Runs the app in the development mode.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Tasks
+1. Get familiar with the [Figma design](https://www.figma.com/file/P0Pw4VZo9xaXVULeNYw2x5/Frontend-engineer-task?node-id=0%3A1);
+2. Based on the design, choose technology stack (if possible use React + TypeScript) and be ready to justify your choice;
 
-### `yarn test`
+    Actually I've chosen the proposed stack(React + typescript) because React is passing well for that kind of application. I've bootstrapped the app with CRA script. Here we don't need any complicated services(quite simple client app). I've decided to add react bootstrap(just not to invent bicycle to keep the same styling for the app) and react router dom (in order the app to be full state).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Create git repository (for example, on github.com or gitlab.com);
 
-### `yarn build`
+    [Link to the project](https://github.com/stepkraft/sw_legal) 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Create the solution in a manner which is usable in other projects;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    In regards of creating reusable components I've put the components layout, header and footer to shared folder. Actually if we like to share these components between other React based projects we can create separate repo and import these components from there. If we like to reuse these components not in React applications such as Angular or Vue, I suppose we could create custom web elements(actually haven't touched it yet)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5. Prepare a list of suggestion (can be both for the solution and for API, design, or
+other)
 
-### `yarn eject`
+    Suggestions:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+      - I'd add redux store in order to keep business logic in one place. For the API communication I'd use redux-thunk or sagas having in mind the complexity.
+      - throw out the legacy page related code from the main bundle and fetch this part on demand.
+      - From the design perspective I'd redefine css variables to keep colors, fonts config in one place.
+      - I'd consider server-side rendering in order to get the app be SEO optimized and more faster.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. Share the source code with us (link to git repository), along with the guidelines of how to run it;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    - [Link to the project](https://github.com/stepkraft/sw_legal)
+    - git clone
+    - yarn install
+    - yarn start
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+7. Share your answers to (2) and (4), as well as other comments in a form of document and/or presentation.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Actually I've put the answers here in readme file (;
