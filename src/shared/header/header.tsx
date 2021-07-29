@@ -2,13 +2,24 @@ import React from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import styles from './styles.module.scss';
 
-function Header() {
+interface MenuItem {
+  label: string;
+  path: string;
+}
+
+type HeaderProps = {
+  menuItems: MenuItem[],
+}
+
+function Header({ menuItems }: HeaderProps) {
   return (
     <Navbar bg="dark" variant="dark">
       <Container fluid>
         <Navbar.Brand href="/">Sonarworks</Navbar.Brand>
         <Nav className={styles.separated}>
-          <Nav.Link href="/legal">Legal centre</Nav.Link>
+          {menuItems.map(({ label, path }) => (
+            <Nav.Link key={path} href={`/${path}`}>{label}</Nav.Link>
+          ))}
         </Nav>
         <Navbar.Brand href="/">
           <img

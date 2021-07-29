@@ -19,7 +19,7 @@ const PageContent = ({ apiPath }: PageContentProps) => {
   const [pageContent, setPageContent] = useState<PageContentType>(initialPageContent);
 
   useEffect(() => {
-    fetch(`https://www.sonarworks.com/api/legal/${apiPath}`)
+    fetch(`${process.env.REACT_APP_API_URL}/legal/${apiPath}`)
       .then((response) => response.json())
       .then(({ title, content }: PageContentType) => {
         setPageContent({ title, content });
