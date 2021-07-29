@@ -11,6 +11,7 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Home from './screens/Home';
 import Legal from './screens/Legal';
+import LegalPage from './screens/LegalPage';
 
 function App() {
   return (
@@ -19,11 +20,14 @@ function App() {
       <div className="main-container">
         <Router>
           <Switch>
-            <Route path="/legal">
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/legal">
               <Legal />
             </Route>
-            <Route path="/">
-              <Home />
+            <Route path="/legal/:subPage">
+              <LegalPage />
             </Route>
           </Switch>
         </Router>
